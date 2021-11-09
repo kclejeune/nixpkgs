@@ -17,6 +17,11 @@ let
       system = "mac64";
       sha256 = upstream-info.sha256_darwin;
     };
+
+    aarch64-darwin = {
+      system = "mac64_m1";
+      sha256 = lib.fakeSha256;
+    };
   };
 
   spec = allSpecs.${stdenv.hostPlatform.system}
